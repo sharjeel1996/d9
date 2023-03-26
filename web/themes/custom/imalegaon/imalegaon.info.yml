@@ -1,0 +1,19 @@
+name: iMalegaon
+type: theme
+base theme: bootstrap
+description: "The imalegaon base theme from Drupal 8/9 moved to contrib."
+# version: VERSION
+# hidden: true
+core_version_requirement: ^9 || ^10
+
+regions:
+  header: Heder
+  imalegaonmenu: Navigation
+  content: Content
+  footer: Footer
+  page_top: Page Top
+  page_bottom: Page bottome
+
+libraries:
+  - imalegaon/global-styling
+  # - imalegaon/global-scripts

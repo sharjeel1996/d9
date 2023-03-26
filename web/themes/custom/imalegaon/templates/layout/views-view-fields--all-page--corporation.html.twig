@@ -1,0 +1,22 @@
+
+
+<div id="home" class="first_page">
+  <div class="wrapper">
+    <div class="content content_home">
+        <div class="header header_home">
+            {{ fields.title.content }}
+            </div>
+          {% set text = fields.body.content | render | striptags %}
+          <p class="description">{{text|truncate(150, true, ' ...') }}</p> 
+        </div>
+            {# <div class="image" style="background-image :url('{{fields.field_image.content}}');"></div> #}
+        <div class="image" style="background:url("");">
+            <img src={{ fields.field_image.content }} width="100%">
+            {# <h1>this is news page</h1> #}
+        </div>
+            {# <div style="background-image: url('{{ file_url(content.field_masthead_image['#items'].entity.uri.value) }}');"> #}
+    </div>
+  </div>
+</div>
+
+
