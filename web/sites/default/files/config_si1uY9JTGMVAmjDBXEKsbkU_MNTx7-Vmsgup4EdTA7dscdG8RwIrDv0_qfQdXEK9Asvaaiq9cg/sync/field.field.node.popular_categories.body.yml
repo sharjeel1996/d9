@@ -1,0 +1,23 @@
+uuid: be070fc4-25a1-4b1b-986c-c739cc4cf7af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.popular_categories
+  module:
+    - text
+id: node.popular_categories.body
+field_name: body
+entity_type: node
+bundle: popular_categories
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

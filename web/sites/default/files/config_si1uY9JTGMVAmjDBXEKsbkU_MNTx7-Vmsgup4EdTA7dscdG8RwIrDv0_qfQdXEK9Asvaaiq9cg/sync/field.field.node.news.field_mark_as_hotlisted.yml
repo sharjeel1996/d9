@@ -1,0 +1,23 @@
+uuid: b015f64f-55a9-4548-aaca-40196ba53c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mark_as_hotlisted
+    - node.type.news
+  module:
+    - options
+id: node.news.field_mark_as_hotlisted
+field_name: field_mark_as_hotlisted
+entity_type: node
+bundle: news
+label: 'Mark as hotlisted'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: regular_news
+default_value_callback: ''
+settings: {  }
+field_type: list_string

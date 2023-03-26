@@ -1,0 +1,28 @@
+uuid: 6da61c63-5676-48f7-91c6-3ae149414a5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: imalegaon_search_form_narrow
+theme: imalegaon
+region: header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: ''

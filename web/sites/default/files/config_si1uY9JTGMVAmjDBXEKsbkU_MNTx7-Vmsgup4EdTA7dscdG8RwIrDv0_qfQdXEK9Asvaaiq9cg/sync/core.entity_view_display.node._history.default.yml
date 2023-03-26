@@ -1,0 +1,59 @@
+uuid: ccc67e3f-ffeb-47aa-b2cb-01e77f4c31d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node._history.body
+    - field.field.node._history.field_hotlisted
+    - field.field.node._history.field_image
+    - field.field.node._history.field_tags
+    - node.type._history
+  module:
+    - image
+    - text
+    - user
+id: node._history.default
+targetEntityType: node
+bundle: _history
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_hotlisted:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

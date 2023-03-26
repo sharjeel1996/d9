@@ -1,0 +1,29 @@
+uuid: face7239-6f01-4398-ad2b-b5bd5f5b8a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotlisted
+    - node.type._history
+    - taxonomy.vocabulary.tags
+id: node._history.field_hotlisted
+field_name: field_hotlisted
+entity_type: node
+bundle: _history
+label: hotlisted
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

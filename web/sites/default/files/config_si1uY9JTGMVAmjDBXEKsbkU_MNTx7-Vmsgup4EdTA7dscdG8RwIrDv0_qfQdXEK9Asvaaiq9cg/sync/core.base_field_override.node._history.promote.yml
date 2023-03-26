@@ -1,0 +1,22 @@
+uuid: baddc71f-aa43-4f3b-b72d-cf0ecf57661a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type._history
+id: node._history.promote
+field_name: promote
+entity_type: node
+bundle: _history
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

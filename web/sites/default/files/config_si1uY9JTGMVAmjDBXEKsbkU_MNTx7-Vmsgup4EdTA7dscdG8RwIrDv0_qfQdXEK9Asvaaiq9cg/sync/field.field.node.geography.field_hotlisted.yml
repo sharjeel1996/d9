@@ -1,0 +1,29 @@
+uuid: 0db86ddf-da2e-4858-b3dd-e29777391a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotlisted
+    - node.type.geography
+    - taxonomy.vocabulary.tags
+id: node.geography.field_hotlisted
+field_name: field_hotlisted
+entity_type: node
+bundle: geography
+label: hotlisted
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: f850bd81-7593-40c1-9eed-b1ccabe9460e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.listing_pages
+  module:
+    - text
+id: node.listing_pages.body
+field_name: body
+entity_type: node
+bundle: listing_pages
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

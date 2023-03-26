@@ -1,0 +1,22 @@
+uuid: a1d18b0d-b2fd-4f67-9fe1-4037363a1432
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: imalegaon_help
+theme: imalegaon
+region: header
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 4c7fdc66-4dc4-427e-8503-0bec9172423d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: imalegaon_primary_admin_actions
+theme: imalegaon
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

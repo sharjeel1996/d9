@@ -1,0 +1,22 @@
+uuid: 0e808494-3b3d-4281-bede-c85f54b8bbb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: imalegaon_powered
+theme: imalegaon
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

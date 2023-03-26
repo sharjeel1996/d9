@@ -1,0 +1,22 @@
+uuid: c71e599a-631b-4f6e-ae28-81c4c90fee80
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: imalegaon_breadcrumbs
+theme: imalegaon
+region: header
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

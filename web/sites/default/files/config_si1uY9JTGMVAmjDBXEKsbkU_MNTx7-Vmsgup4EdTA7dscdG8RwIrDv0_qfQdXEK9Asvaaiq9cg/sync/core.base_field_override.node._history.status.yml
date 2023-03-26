@@ -1,0 +1,22 @@
+uuid: 7442aefa-007f-4017-86b1-4fd53b2f0684
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type._history
+id: node._history.status
+field_name: status
+entity_type: node
+bundle: _history
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

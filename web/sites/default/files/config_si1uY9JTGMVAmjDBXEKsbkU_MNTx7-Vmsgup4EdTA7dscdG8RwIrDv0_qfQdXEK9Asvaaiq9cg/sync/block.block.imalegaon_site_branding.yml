@@ -1,0 +1,25 @@
+uuid: 16b04780-4163-4554-ab85-2a8f36cc2897
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: imalegaon_site_branding
+theme: imalegaon
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

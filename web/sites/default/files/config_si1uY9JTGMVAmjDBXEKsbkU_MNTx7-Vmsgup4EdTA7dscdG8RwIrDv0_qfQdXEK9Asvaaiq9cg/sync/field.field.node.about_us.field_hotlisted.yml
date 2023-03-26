@@ -1,0 +1,29 @@
+uuid: eaeb02a9-18ff-4eb5-9a13-0f0cc9300d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotlisted
+    - node.type.about_us
+    - taxonomy.vocabulary.tags
+id: node.about_us.field_hotlisted
+field_name: field_hotlisted
+entity_type: node
+bundle: about_us
+label: hotlisted
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

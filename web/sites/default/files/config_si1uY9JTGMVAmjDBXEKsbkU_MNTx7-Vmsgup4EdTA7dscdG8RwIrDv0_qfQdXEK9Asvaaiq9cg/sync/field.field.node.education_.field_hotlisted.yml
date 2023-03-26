@@ -1,0 +1,29 @@
+uuid: 97fa25d9-8958-4ef1-bb6b-69e6d174075d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotlisted
+    - node.type.education_
+    - taxonomy.vocabulary.tags
+id: node.education_.field_hotlisted
+field_name: field_hotlisted
+entity_type: node
+bundle: education_
+label: hotlisted
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

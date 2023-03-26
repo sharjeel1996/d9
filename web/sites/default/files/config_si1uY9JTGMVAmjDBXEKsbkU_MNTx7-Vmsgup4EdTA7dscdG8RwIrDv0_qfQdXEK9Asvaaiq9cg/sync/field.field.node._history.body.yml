@@ -1,0 +1,23 @@
+uuid: ee7098dc-08af-4224-8502-1f552134596a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type._history
+  module:
+    - text
+id: node._history.body
+field_name: body
+entity_type: node
+bundle: _history
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,38 @@
+uuid: 721e60ec-be48-41ef-89c4-04120960cab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_image
+    - taxonomy.vocabulary.category
+  module:
+    - image
+id: taxonomy_term.category.field_category_image
+field_name: field_category_image
+entity_type: taxonomy_term
+bundle: category
+label: 'Category image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'svg png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -1,0 +1,23 @@
+uuid: 6c091870-065b-4eb7-be09-30f39eddcf42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.economy
+  module:
+    - text
+id: node.economy.body
+field_name: body
+entity_type: node
+bundle: economy
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

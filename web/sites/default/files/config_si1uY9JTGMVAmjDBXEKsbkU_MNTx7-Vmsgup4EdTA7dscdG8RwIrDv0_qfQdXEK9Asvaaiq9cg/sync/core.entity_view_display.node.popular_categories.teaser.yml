@@ -1,0 +1,32 @@
+uuid: cb8f8b2c-fc38-47af-8177-d83ce75a01ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.popular_categories.body
+    - field.field.node.popular_categories.field_category
+    - node.type.popular_categories
+  module:
+    - text
+    - user
+id: node.popular_categories.teaser
+targetEntityType: node
+bundle: popular_categories
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_category: true

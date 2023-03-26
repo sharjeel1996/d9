@@ -1,0 +1,22 @@
+uuid: a1774243-7ed0-441a-b57d-04866300ba91
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: imalegaon_primary_local_tasks
+theme: imalegaon
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

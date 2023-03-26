@@ -1,0 +1,20 @@
+uuid: ba10c58f-b648-43ab-92fe-71427fd88305
+langcode: en
+status: true
+dependencies:
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: imalegaon_page_title
+theme: imalegaon
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

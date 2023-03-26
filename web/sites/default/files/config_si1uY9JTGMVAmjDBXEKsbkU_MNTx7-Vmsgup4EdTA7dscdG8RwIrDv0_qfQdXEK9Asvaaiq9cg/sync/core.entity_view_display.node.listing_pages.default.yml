@@ -1,0 +1,28 @@
+uuid: 36e420e3-c6b5-4849-bb27-17b40e3916a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing_pages.body
+    - node.type.listing_pages
+  module:
+    - text
+    - user
+id: node.listing_pages.default
+targetEntityType: node
+bundle: listing_pages
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

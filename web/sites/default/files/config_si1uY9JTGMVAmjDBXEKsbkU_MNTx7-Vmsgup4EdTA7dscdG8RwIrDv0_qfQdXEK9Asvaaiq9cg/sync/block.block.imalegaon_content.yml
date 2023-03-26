@@ -1,0 +1,22 @@
+uuid: 9bfc4aff-9755-4b1b-9d93-e421522c7e15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imalegaon
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: imalegaon_content
+theme: imalegaon
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

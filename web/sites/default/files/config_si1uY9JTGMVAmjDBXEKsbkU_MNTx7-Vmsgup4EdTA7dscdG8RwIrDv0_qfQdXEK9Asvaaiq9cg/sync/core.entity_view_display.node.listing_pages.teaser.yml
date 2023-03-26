@@ -1,0 +1,30 @@
+uuid: f627d5ba-6d5f-4f92-a9ac-ecb10878bd17
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.listing_pages.body
+    - node.type.listing_pages
+  module:
+    - text
+    - user
+id: node.listing_pages.teaser
+targetEntityType: node
+bundle: listing_pages
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

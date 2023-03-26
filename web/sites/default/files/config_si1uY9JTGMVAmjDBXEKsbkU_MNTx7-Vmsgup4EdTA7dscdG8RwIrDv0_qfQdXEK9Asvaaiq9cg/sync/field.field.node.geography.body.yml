@@ -1,0 +1,23 @@
+uuid: bf3d9f01-149c-40b6-9c5c-7fb682453935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.geography
+  module:
+    - text
+id: node.geography.body
+field_name: body
+entity_type: node
+bundle: geography
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
