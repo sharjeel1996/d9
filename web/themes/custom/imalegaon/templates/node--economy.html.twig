@@ -98,8 +98,53 @@
 
   
 
-</article> #}
- 
-<div{{ content_attributes.addClass('content') }}>
-    {{ content }}
+#}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+    'imalegaon',
+  ]
+%}
+{# <h1>Hello World</h1> #}
+<article{{attributes.addClass(classes)}}>
+	{# <h1>My template ~ {{ myVar }}</h1> #}
+	<div class="event_image">
+		{{ content.field_content_image}}
+	</div>
+	<div class="event_content">
+	<div class="event_heading">
+	<h2>{{ label }}</h2>
+	</div>		
+		{% if display_submitted %}{% endif %}
+		<div{{content_attributes.addClass('content')}}>
+	<span style="color:red;">{{fields.content.type}}</span>
+			{# {{ dump(content.body) }} #}
+			{{ content.body.0 }}
+	<span style="color:red;">{{ date }}</span>
+	{# <span style="color:red;">{{ entity_type	 }}</span> #}
+	{{dump(content.field_school_code['#items'])}}
+	{{dump(content.field_school_code['#items'].entity)}}
+	{% for i in 0..10 %}
+     {{content.field_school_code[i]}}
+	{% endfor %}
+
+ 	{# <span style="color:red;">{{(content.field_school_code[0 ]['#title'])}}</span> #}
+ 	{# <span style="color:red;">{{(content.field_school_code.1)}}</span> #}
+
+		</div>
+	</div>
+</article>
+{# 
+  <div class="node">
+  <div class="full_node">
+  {{content.field_image}}
   </div>
+  <div class="content_node">
+  {{content.body}}
+  </div>
+  </div> #}
