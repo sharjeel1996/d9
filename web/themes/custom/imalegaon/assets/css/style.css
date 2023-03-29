@@ -1976,6 +1976,12 @@ section {
   text-decoration: none;
 }
 
+.node_image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
 
 
 

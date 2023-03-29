@@ -65,7 +65,7 @@
  *   in different view modes.
  */
 #}
-{# {{ attach_library('core/drupal.dialog.ajax') }} #}
+{{ attach_library('core/drupal.dialog.ajax') }}
 {# {%
   set classes = [
     node.bundle|clean_class,
@@ -98,46 +98,12 @@
 
   
 
-#}
-{%
-  set classes = [
-    node.bundle|clean_class,
-    node.isPromoted() ? 'is-promoted',
-    node.isSticky() ? 'is-sticky',
-    not node.isPublished() ? 'is-unpublished',
-    view_mode ? view_mode|clean_class,
-    'clearfix',
-    'imalegaon',
-  ]
-%}
-{# <h1>Hello World</h1> #}
-<article{{attributes.addClass(classes)}}>
-	{# <h1>My template ~ {{ myVar }}</h1> #}
-  
-	<div class="node_fullContent">		
-		{% if display_submitted %}{% endif %}
-		<div{{content_attributes.addClass('content')}}>
-	    <span style="color:red;">{{fields.content.type}}</span>
-     
-	  <div class="node_image">
-	  	{{ content.field_image}}
-	  </div>
-     <div class="">
-	      <h2>{{ label }}</h2>
-	    </div>
-			{{ content.body.0 }}
-	    <span style="color:red;">{{ date }}</span>
-	    {{dump(content.field_school_code['#items'])}}
-	    {{dump(content.field_school_code['#items'].entity)}}
-		</div>
-	</div>
-</article>
-{# 
-  <div class="node">
-  <div class="full_node">
-  {{content.field_image}}
-  </div>
-  <div class="content_node">
-  {{content.body}}
-  </div>
+</article> #}
+ <div >
+ {{ content.field_image}}
+ {{ content.title }}
+ {{content.body}}
+ </div>
+{# <div{{ content_attributes.addClass('content') }}>
+    {{ content }}
   </div> #}
