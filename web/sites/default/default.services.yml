@@ -72,7 +72,7 @@ parameters:
     #
     # Enabling Twig debugging is not recommended in production environments.
     # @default false
-    debug: false
+    debug: true
     # Twig auto-reload:
     #
     # Automatically recompile Twig templates whenever the source code changes.
@@ -115,7 +115,8 @@ parameters:
     # render array, hence varying every render array by these cache contexts.
     #
     # @default ['languages:language_interface', 'theme', 'user.permissions']
-    required_cache_contexts: ['languages:language_interface', 'theme', 'user.permissions']
+    required_cache_contexts:
+      ["languages:language_interface", "theme", "user.permissions"]
     # Renderer automatic placeholdering conditions:
     #
     # Drupal allows portions of the page to be automatically deferred when
@@ -140,7 +141,7 @@ parameters:
       # Disable by setting to [].
       #
       # @default ['session', 'user']
-      contexts: ['session', 'user']
+      contexts: ["session", "user"]
       # Tags with a high invalidation frequency.
       #
       # Disable by setting to [].
@@ -154,7 +155,7 @@ parameters:
     # Enabling render cache debugging is not recommended in production
     # environments.
     # @default false
-    debug: false
+    debug: true
   # Cacheability debugging:
   #
   # Responses with cacheability metadata (CacheableResponseInterface instances)
@@ -206,7 +207,7 @@ parameters:
     allowedMethods: []
     # Configure requests allowed from specific origins. Do not include trailing
     # slashes with URLs.
-    allowedOrigins: ['*']
+    allowedOrigins: ["*"]
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.

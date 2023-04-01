@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #2487ce;
+  color: #124265;
   text-decoration: none;
 }
 
 a:hover {
-  color: #469fdf;
+  color: #417093;
   text-decoration: none;
 }
 
@@ -418,6 +418,10 @@ h6 {
   align-items: center;
   justify-content: left;
   padding: 5rem;
+}
+.nav li a:hover {
+  background-color: transparent;
+  /* border-bottom: 1px solid #417093; */
 }
 
 /*--------------------------------------------------------------
@@ -1986,6 +1990,10 @@ section {
   width: 100%;
   height: 400px;
   overflow: hidden;
+}
+
+.node_image img {
+  width: 100%;
 }
 .node_content .node_heading h2 {
   font-size: 40px;

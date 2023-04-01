@@ -39,7 +39,8 @@
    <div class="col-lg-6 pt-4 pt-lg-0">
     <h2>{{fields.title.content}}</h2>
     <p class="description">{{ fields.body.content }}</p>
-  <a href="{{ fields.field.nid }}" class="btn-learn-more">Learn More</a>
+    {# <a href="{{ fields.view_node.content }}">Read more</a> #}
+  <a href="{{ fields.view_node.content }}" class="btn-learn-more">Learn More</a>
   {{dump( fields.field.nid.content )}}
   </div>
 </div>
