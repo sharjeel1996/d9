@@ -1,6 +1,6 @@
 uuid: ba10c58f-b648-43ab-92fe-71427fd88305
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - imalegaon

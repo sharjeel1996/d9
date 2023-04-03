@@ -4,12 +4,12 @@ features:
   favicon: 1
   node_user_picture: 1
 logo:
-  path: 'public://logo_0.png'
+  path: 'public://malegaonPortal_Logo.png'
   url: ''
   use_default: 0
 favicon:
   mimetype: image/png
-  path: 'public://logo.png'
+  path: 'public://malegaonPortal_Icon.png'
   url: /sites/default/files/logo.png
   use_default: 0
 schemas:

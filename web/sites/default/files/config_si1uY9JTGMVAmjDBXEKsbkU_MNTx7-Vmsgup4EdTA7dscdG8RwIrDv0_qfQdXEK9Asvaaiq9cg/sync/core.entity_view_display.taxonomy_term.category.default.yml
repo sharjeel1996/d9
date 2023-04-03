@@ -15,7 +15,7 @@ mode: default
 content:
   description:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0
