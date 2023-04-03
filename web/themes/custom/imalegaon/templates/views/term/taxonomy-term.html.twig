@@ -25,14 +25,17 @@
  * @ingroup themeable
  */
 #}
-<div{{attributes}}>
+{# <div{{attributes}}>
 	{{ title_prefix }}
 	{% if name and not page %}
 		<h2>
 			<a href="{{ url }}">{{ name }}</a>
+			{{ fields.name }}
 		</h2>
 	{% endif %}
 	{{ title_suffix }}
-	<h2>hello this is taxonomy</h2>
-	{{ content }}
-</div>
+	<h2>hello this is taxonomy</h2> #}
+
+
+	{# {{ content }} #}
+{# </div> #}
