@@ -16,12 +16,10 @@
 
 
 -- Dumping database structure for my_city
-DROP DATABASE IF EXISTS `my_city`;
-CREATE DATABASE IF NOT EXISTS `my_city` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `my_city` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `my_city`;
 
 -- Dumping structure for table my_city.batch
-DROP TABLE IF EXISTS `batch`;
 CREATE TABLE IF NOT EXISTS `batch` (
   `bid` int unsigned NOT NULL COMMENT 'Primary Key: Unique batch ID.',
   `token` varchar(64) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'A string token generated against the current user''s session id and the batch id, used to ensure that only the user who submitted the batch can effectively access it.',
@@ -34,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `batch` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content
-DROP TABLE IF EXISTS `block_content`;
 CREATE TABLE IF NOT EXISTS `block_content` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `revision_id` int unsigned DEFAULT NULL,
@@ -50,7 +47,6 @@ CREATE TABLE IF NOT EXISTS `block_content` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content_field_data
-DROP TABLE IF EXISTS `block_content_field_data`;
 CREATE TABLE IF NOT EXISTS `block_content_field_data` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -72,7 +68,6 @@ CREATE TABLE IF NOT EXISTS `block_content_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content_field_revision
-DROP TABLE IF EXISTS `block_content_field_revision`;
 CREATE TABLE IF NOT EXISTS `block_content_field_revision` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -89,7 +84,6 @@ CREATE TABLE IF NOT EXISTS `block_content_field_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content_revision
-DROP TABLE IF EXISTS `block_content_revision`;
 CREATE TABLE IF NOT EXISTS `block_content_revision` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -106,7 +100,6 @@ CREATE TABLE IF NOT EXISTS `block_content_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content_revision__body
-DROP TABLE IF EXISTS `block_content_revision__body`;
 CREATE TABLE IF NOT EXISTS `block_content_revision__body` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -126,7 +119,6 @@ CREATE TABLE IF NOT EXISTS `block_content_revision__body` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.block_content__body
-DROP TABLE IF EXISTS `block_content__body`;
 CREATE TABLE IF NOT EXISTS `block_content__body` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -146,7 +138,6 @@ CREATE TABLE IF NOT EXISTS `block_content__body` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cachetags
-DROP TABLE IF EXISTS `cachetags`;
 CREATE TABLE IF NOT EXISTS `cachetags` (
   `tag` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Namespace-prefixed tag string.',
   `invalidations` int NOT NULL DEFAULT '0' COMMENT 'Number incremented when the tag is invalidated.',
@@ -156,7 +147,6 @@ CREATE TABLE IF NOT EXISTS `cachetags` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_bootstrap
-DROP TABLE IF EXISTS `cache_bootstrap`;
 CREATE TABLE IF NOT EXISTS `cache_bootstrap` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -173,7 +163,6 @@ CREATE TABLE IF NOT EXISTS `cache_bootstrap` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_config
-DROP TABLE IF EXISTS `cache_config`;
 CREATE TABLE IF NOT EXISTS `cache_config` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -190,7 +179,6 @@ CREATE TABLE IF NOT EXISTS `cache_config` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_container
-DROP TABLE IF EXISTS `cache_container`;
 CREATE TABLE IF NOT EXISTS `cache_container` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -207,7 +195,6 @@ CREATE TABLE IF NOT EXISTS `cache_container` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_data
-DROP TABLE IF EXISTS `cache_data`;
 CREATE TABLE IF NOT EXISTS `cache_data` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -224,7 +211,6 @@ CREATE TABLE IF NOT EXISTS `cache_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_default
-DROP TABLE IF EXISTS `cache_default`;
 CREATE TABLE IF NOT EXISTS `cache_default` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -241,7 +227,6 @@ CREATE TABLE IF NOT EXISTS `cache_default` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_discovery
-DROP TABLE IF EXISTS `cache_discovery`;
 CREATE TABLE IF NOT EXISTS `cache_discovery` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -258,7 +243,6 @@ CREATE TABLE IF NOT EXISTS `cache_discovery` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_dynamic_page_cache
-DROP TABLE IF EXISTS `cache_dynamic_page_cache`;
 CREATE TABLE IF NOT EXISTS `cache_dynamic_page_cache` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -275,7 +259,6 @@ CREATE TABLE IF NOT EXISTS `cache_dynamic_page_cache` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_entity
-DROP TABLE IF EXISTS `cache_entity`;
 CREATE TABLE IF NOT EXISTS `cache_entity` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -292,7 +275,6 @@ CREATE TABLE IF NOT EXISTS `cache_entity` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_menu
-DROP TABLE IF EXISTS `cache_menu`;
 CREATE TABLE IF NOT EXISTS `cache_menu` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -309,7 +291,6 @@ CREATE TABLE IF NOT EXISTS `cache_menu` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_page
-DROP TABLE IF EXISTS `cache_page`;
 CREATE TABLE IF NOT EXISTS `cache_page` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -326,7 +307,6 @@ CREATE TABLE IF NOT EXISTS `cache_page` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_render
-DROP TABLE IF EXISTS `cache_render`;
 CREATE TABLE IF NOT EXISTS `cache_render` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -343,7 +323,6 @@ CREATE TABLE IF NOT EXISTS `cache_render` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.cache_toolbar
-DROP TABLE IF EXISTS `cache_toolbar`;
 CREATE TABLE IF NOT EXISTS `cache_toolbar` (
   `cid` varchar(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.',
   `data` longblob COMMENT 'A collection of data to cache.',
@@ -360,7 +339,6 @@ CREATE TABLE IF NOT EXISTS `cache_toolbar` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.comment
-DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
   `cid` int unsigned NOT NULL AUTO_INCREMENT,
   `comment_type` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The ID of the target entity.',
@@ -374,7 +352,6 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.comment_entity_statistics
-DROP TABLE IF EXISTS `comment_entity_statistics`;
 CREATE TABLE IF NOT EXISTS `comment_entity_statistics` (
   `entity_id` int unsigned NOT NULL DEFAULT '0' COMMENT 'The entity_id of the entity for which the statistics are compiled.',
   `entity_type` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT 'node' COMMENT 'The entity_type of the entity to which this comment is a reply.',
@@ -393,7 +370,6 @@ CREATE TABLE IF NOT EXISTS `comment_entity_statistics` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.comment_field_data
-DROP TABLE IF EXISTS `comment_field_data`;
 CREATE TABLE IF NOT EXISTS `comment_field_data` (
   `cid` int unsigned NOT NULL,
   `comment_type` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The ID of the target entity.',
@@ -427,7 +403,6 @@ CREATE TABLE IF NOT EXISTS `comment_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.comment__comment_body
-DROP TABLE IF EXISTS `comment__comment_body`;
 CREATE TABLE IF NOT EXISTS `comment__comment_body` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -446,7 +421,6 @@ CREATE TABLE IF NOT EXISTS `comment__comment_body` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.config
-DROP TABLE IF EXISTS `config`;
 CREATE TABLE IF NOT EXISTS `config` (
   `collection` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object collection.',
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object name.',
@@ -457,7 +431,6 @@ CREATE TABLE IF NOT EXISTS `config` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.config_export
-DROP TABLE IF EXISTS `config_export`;
 CREATE TABLE IF NOT EXISTS `config_export` (
   `collection` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object collection.',
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object name.',
@@ -468,7 +441,6 @@ CREATE TABLE IF NOT EXISTS `config_export` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.config_import
-DROP TABLE IF EXISTS `config_import`;
 CREATE TABLE IF NOT EXISTS `config_import` (
   `collection` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object collection.',
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object name.',
@@ -479,7 +451,6 @@ CREATE TABLE IF NOT EXISTS `config_import` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.config_snapshot
-DROP TABLE IF EXISTS `config_snapshot`;
 CREATE TABLE IF NOT EXISTS `config_snapshot` (
   `collection` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object collection.',
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Config object name.',
@@ -490,7 +461,6 @@ CREATE TABLE IF NOT EXISTS `config_snapshot` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.file_managed
-DROP TABLE IF EXISTS `file_managed`;
 CREATE TABLE IF NOT EXISTS `file_managed` (
   `fid` int unsigned NOT NULL AUTO_INCREMENT,
   `uuid` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
@@ -509,12 +479,11 @@ CREATE TABLE IF NOT EXISTS `file_managed` (
   KEY `file_field__uri` (`uri`(191)),
   KEY `file_field__status` (`status`),
   KEY `file_field__changed` (`changed`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='The base table for file entities.';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='The base table for file entities.';
 
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.file_usage
-DROP TABLE IF EXISTS `file_usage`;
 CREATE TABLE IF NOT EXISTS `file_usage` (
   `fid` int unsigned NOT NULL COMMENT 'File ID.',
   `module` varchar(50) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The name of the module that is using the file.',
@@ -530,7 +499,6 @@ CREATE TABLE IF NOT EXISTS `file_usage` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.history
-DROP TABLE IF EXISTS `history`;
 CREATE TABLE IF NOT EXISTS `history` (
   `uid` int NOT NULL DEFAULT '0' COMMENT 'The "users".uid that read the "node" nid.',
   `nid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "node".nid that was read.',
@@ -542,7 +510,6 @@ CREATE TABLE IF NOT EXISTS `history` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.key_value
-DROP TABLE IF EXISTS `key_value`;
 CREATE TABLE IF NOT EXISTS `key_value` (
   `collection` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'A named collection of key and value pairs.',
   `name` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The key of the key-value pair. As KEY is a SQL reserved keyword, name was chosen instead.',
@@ -553,7 +520,6 @@ CREATE TABLE IF NOT EXISTS `key_value` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.key_value_expire
-DROP TABLE IF EXISTS `key_value_expire`;
 CREATE TABLE IF NOT EXISTS `key_value_expire` (
   `collection` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'A named collection of key and value pairs.',
   `name` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The key of the key/value pair.',
@@ -566,7 +532,6 @@ CREATE TABLE IF NOT EXISTS `key_value_expire` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.menu_link_content
-DROP TABLE IF EXISTS `menu_link_content`;
 CREATE TABLE IF NOT EXISTS `menu_link_content` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `revision_id` int unsigned DEFAULT NULL,
@@ -581,7 +546,6 @@ CREATE TABLE IF NOT EXISTS `menu_link_content` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.menu_link_content_data
-DROP TABLE IF EXISTS `menu_link_content_data`;
 CREATE TABLE IF NOT EXISTS `menu_link_content_data` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -612,7 +576,6 @@ CREATE TABLE IF NOT EXISTS `menu_link_content_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.menu_link_content_field_revision
-DROP TABLE IF EXISTS `menu_link_content_field_revision`;
 CREATE TABLE IF NOT EXISTS `menu_link_content_field_revision` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -635,7 +598,6 @@ CREATE TABLE IF NOT EXISTS `menu_link_content_field_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.menu_link_content_revision
-DROP TABLE IF EXISTS `menu_link_content_revision`;
 CREATE TABLE IF NOT EXISTS `menu_link_content_revision` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -652,7 +614,6 @@ CREATE TABLE IF NOT EXISTS `menu_link_content_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.menu_tree
-DROP TABLE IF EXISTS `menu_tree`;
 CREATE TABLE IF NOT EXISTS `menu_tree` (
   `menu_name` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The menu name. All links with the same menu name (such as ''tools'') are part of the same menu.',
   `mlid` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'The menu link ID (mlid) is the integer primary key.',
@@ -694,7 +655,6 @@ CREATE TABLE IF NOT EXISTS `menu_tree` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node
-DROP TABLE IF EXISTS `node`;
 CREATE TABLE IF NOT EXISTS `node` (
   `nid` int unsigned NOT NULL AUTO_INCREMENT,
   `vid` int unsigned DEFAULT NULL,
@@ -710,7 +670,6 @@ CREATE TABLE IF NOT EXISTS `node` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_access
-DROP TABLE IF EXISTS `node_access`;
 CREATE TABLE IF NOT EXISTS `node_access` (
   `nid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "node".nid this record affects.',
   `langcode` varchar(12) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The "language".langcode of this node.',
@@ -726,7 +685,6 @@ CREATE TABLE IF NOT EXISTS `node_access` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_field_data
-DROP TABLE IF EXISTS `node_field_data`;
 CREATE TABLE IF NOT EXISTS `node_field_data` (
   `nid` int unsigned NOT NULL,
   `vid` int unsigned NOT NULL,
@@ -756,7 +714,6 @@ CREATE TABLE IF NOT EXISTS `node_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_field_revision
-DROP TABLE IF EXISTS `node_field_revision`;
 CREATE TABLE IF NOT EXISTS `node_field_revision` (
   `nid` int unsigned NOT NULL,
   `vid` int unsigned NOT NULL,
@@ -778,7 +735,6 @@ CREATE TABLE IF NOT EXISTS `node_field_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision
-DROP TABLE IF EXISTS `node_revision`;
 CREATE TABLE IF NOT EXISTS `node_revision` (
   `nid` int unsigned NOT NULL,
   `vid` int unsigned NOT NULL AUTO_INCREMENT,
@@ -791,12 +747,11 @@ CREATE TABLE IF NOT EXISTS `node_revision` (
   KEY `node__nid` (`nid`),
   KEY `node_field__langcode` (`langcode`),
   KEY `node_field__revision_uid__target_id` (`revision_uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='The revision table for node entities.';
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='The revision table for node entities.';
 
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__body
-DROP TABLE IF EXISTS `node_revision__body`;
 CREATE TABLE IF NOT EXISTS `node_revision__body` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -816,7 +771,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__body` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__comment
-DROP TABLE IF EXISTS `node_revision__comment`;
 CREATE TABLE IF NOT EXISTS `node_revision__comment` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -833,7 +787,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__comment` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__field_category
-DROP TABLE IF EXISTS `node_revision__field_category`;
 CREATE TABLE IF NOT EXISTS `node_revision__field_category` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -851,7 +804,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__field_category` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__field_hotlisted
-DROP TABLE IF EXISTS `node_revision__field_hotlisted`;
 CREATE TABLE IF NOT EXISTS `node_revision__field_hotlisted` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -869,7 +821,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__field_hotlisted` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__field_image
-DROP TABLE IF EXISTS `node_revision__field_image`;
 CREATE TABLE IF NOT EXISTS `node_revision__field_image` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -891,7 +842,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__field_image` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__field_mark_as_hotlisted
-DROP TABLE IF EXISTS `node_revision__field_mark_as_hotlisted`;
 CREATE TABLE IF NOT EXISTS `node_revision__field_mark_as_hotlisted` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -909,7 +859,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__field_mark_as_hotlisted` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node_revision__field_tags
-DROP TABLE IF EXISTS `node_revision__field_tags`;
 CREATE TABLE IF NOT EXISTS `node_revision__field_tags` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -927,7 +876,6 @@ CREATE TABLE IF NOT EXISTS `node_revision__field_tags` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__body
-DROP TABLE IF EXISTS `node__body`;
 CREATE TABLE IF NOT EXISTS `node__body` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -947,7 +895,6 @@ CREATE TABLE IF NOT EXISTS `node__body` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__comment
-DROP TABLE IF EXISTS `node__comment`;
 CREATE TABLE IF NOT EXISTS `node__comment` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -964,7 +911,6 @@ CREATE TABLE IF NOT EXISTS `node__comment` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__field_category
-DROP TABLE IF EXISTS `node__field_category`;
 CREATE TABLE IF NOT EXISTS `node__field_category` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -982,7 +928,6 @@ CREATE TABLE IF NOT EXISTS `node__field_category` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__field_hotlisted
-DROP TABLE IF EXISTS `node__field_hotlisted`;
 CREATE TABLE IF NOT EXISTS `node__field_hotlisted` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1000,7 +945,6 @@ CREATE TABLE IF NOT EXISTS `node__field_hotlisted` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__field_image
-DROP TABLE IF EXISTS `node__field_image`;
 CREATE TABLE IF NOT EXISTS `node__field_image` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1022,7 +966,6 @@ CREATE TABLE IF NOT EXISTS `node__field_image` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__field_mark_as_hotlisted
-DROP TABLE IF EXISTS `node__field_mark_as_hotlisted`;
 CREATE TABLE IF NOT EXISTS `node__field_mark_as_hotlisted` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1040,7 +983,6 @@ CREATE TABLE IF NOT EXISTS `node__field_mark_as_hotlisted` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.node__field_tags
-DROP TABLE IF EXISTS `node__field_tags`;
 CREATE TABLE IF NOT EXISTS `node__field_tags` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1058,7 +1000,6 @@ CREATE TABLE IF NOT EXISTS `node__field_tags` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.path_alias
-DROP TABLE IF EXISTS `path_alias`;
 CREATE TABLE IF NOT EXISTS `path_alias` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `revision_id` int unsigned DEFAULT NULL,
@@ -1078,7 +1019,6 @@ CREATE TABLE IF NOT EXISTS `path_alias` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.path_alias_revision
-DROP TABLE IF EXISTS `path_alias_revision`;
 CREATE TABLE IF NOT EXISTS `path_alias_revision` (
   `id` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -1094,7 +1034,6 @@ CREATE TABLE IF NOT EXISTS `path_alias_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.queue
-DROP TABLE IF EXISTS `queue`;
 CREATE TABLE IF NOT EXISTS `queue` (
   `item_id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key: Unique item ID.',
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The queue name.',
@@ -1109,7 +1048,6 @@ CREATE TABLE IF NOT EXISTS `queue` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.router
-DROP TABLE IF EXISTS `router`;
 CREATE TABLE IF NOT EXISTS `router` (
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Machine name of this route',
   `path` varchar(255) NOT NULL DEFAULT '' COMMENT 'The path for this URI',
@@ -1124,7 +1062,6 @@ CREATE TABLE IF NOT EXISTS `router` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.search_dataset
-DROP TABLE IF EXISTS `search_dataset`;
 CREATE TABLE IF NOT EXISTS `search_dataset` (
   `sid` int unsigned NOT NULL DEFAULT '0' COMMENT 'Search item ID, e.g. node ID for nodes.',
   `langcode` varchar(12) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The "languages".langcode of the item variant.',
@@ -1137,7 +1074,6 @@ CREATE TABLE IF NOT EXISTS `search_dataset` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.search_index
-DROP TABLE IF EXISTS `search_index`;
 CREATE TABLE IF NOT EXISTS `search_index` (
   `word` varchar(50) NOT NULL DEFAULT '' COMMENT 'The "search_total".word that is associated with the search item.',
   `sid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "search_dataset".sid of the searchable item to which the word belongs.',
@@ -1151,7 +1087,6 @@ CREATE TABLE IF NOT EXISTS `search_index` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.search_total
-DROP TABLE IF EXISTS `search_total`;
 CREATE TABLE IF NOT EXISTS `search_total` (
   `word` varchar(50) NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique word in the search index.',
   `count` float DEFAULT NULL COMMENT 'The count of the word in the index using Zipf''s law to equalize the probability distribution.',
@@ -1161,7 +1096,6 @@ CREATE TABLE IF NOT EXISTS `search_total` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.semaphore
-DROP TABLE IF EXISTS `semaphore`;
 CREATE TABLE IF NOT EXISTS `semaphore` (
   `name` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique name.',
   `value` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'A value for the semaphore.',
@@ -1174,7 +1108,6 @@ CREATE TABLE IF NOT EXISTS `semaphore` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.sequences
-DROP TABLE IF EXISTS `sequences`;
 CREATE TABLE IF NOT EXISTS `sequences` (
   `value` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'The value of the sequence.',
   PRIMARY KEY (`value`)
@@ -1183,7 +1116,6 @@ CREATE TABLE IF NOT EXISTS `sequences` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.sessions
-DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE IF NOT EXISTS `sessions` (
   `uid` int unsigned NOT NULL COMMENT 'The "users".uid corresponding to a session, or 0 for anonymous user.',
   `sid` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'A session ID (hashed). The value is generated by Drupal''s session handlers.',
@@ -1198,7 +1130,6 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.shortcut
-DROP TABLE IF EXISTS `shortcut`;
 CREATE TABLE IF NOT EXISTS `shortcut` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `shortcut_set` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The ID of the target entity.',
@@ -1212,7 +1143,6 @@ CREATE TABLE IF NOT EXISTS `shortcut` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.shortcut_field_data
-DROP TABLE IF EXISTS `shortcut_field_data`;
 CREATE TABLE IF NOT EXISTS `shortcut_field_data` (
   `id` int unsigned NOT NULL,
   `shortcut_set` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The ID of the target entity.',
@@ -1232,7 +1162,6 @@ CREATE TABLE IF NOT EXISTS `shortcut_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.shortcut_set_users
-DROP TABLE IF EXISTS `shortcut_set_users`;
 CREATE TABLE IF NOT EXISTS `shortcut_set_users` (
   `uid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "users".uid for this set.',
   `set_name` varchar(32) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The "shortcut_set".set_name that will be displayed for this user.',
@@ -1243,7 +1172,6 @@ CREATE TABLE IF NOT EXISTS `shortcut_set_users` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_index
-DROP TABLE IF EXISTS `taxonomy_index`;
 CREATE TABLE IF NOT EXISTS `taxonomy_index` (
   `nid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "node".nid this record tracks.',
   `tid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The term ID.',
@@ -1257,7 +1185,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_index` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_data
-DROP TABLE IF EXISTS `taxonomy_term_data`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_data` (
   `tid` int unsigned NOT NULL AUTO_INCREMENT,
   `revision_id` int unsigned DEFAULT NULL,
@@ -1273,7 +1200,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_field_data
-DROP TABLE IF EXISTS `taxonomy_term_field_data`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_field_data` (
   `tid` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -1299,7 +1225,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_field_revision
-DROP TABLE IF EXISTS `taxonomy_term_field_revision`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_field_revision` (
   `tid` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL,
@@ -1319,7 +1244,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_field_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_revision
-DROP TABLE IF EXISTS `taxonomy_term_revision`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_revision` (
   `tid` int unsigned NOT NULL,
   `revision_id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -1336,7 +1260,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_revision` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_revision__field_category_image
-DROP TABLE IF EXISTS `taxonomy_term_revision__field_category_image`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_revision__field_category_image` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1358,7 +1281,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_revision__field_category_image` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term_revision__parent
-DROP TABLE IF EXISTS `taxonomy_term_revision__parent`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term_revision__parent` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1376,7 +1298,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term_revision__parent` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term__field_category_image
-DROP TABLE IF EXISTS `taxonomy_term__field_category_image`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term__field_category_image` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1398,7 +1319,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term__field_category_image` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.taxonomy_term__parent
-DROP TABLE IF EXISTS `taxonomy_term__parent`;
 CREATE TABLE IF NOT EXISTS `taxonomy_term__parent` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1416,7 +1336,6 @@ CREATE TABLE IF NOT EXISTS `taxonomy_term__parent` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `uid` int unsigned NOT NULL AUTO_INCREMENT,
   `uuid` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
@@ -1428,7 +1347,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.users_data
-DROP TABLE IF EXISTS `users_data`;
 CREATE TABLE IF NOT EXISTS `users_data` (
   `uid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "users".uid this record affects.',
   `module` varchar(50) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The name of the module declaring the variable.',
@@ -1443,7 +1361,6 @@ CREATE TABLE IF NOT EXISTS `users_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.users_field_data
-DROP TABLE IF EXISTS `users_field_data`;
 CREATE TABLE IF NOT EXISTS `users_field_data` (
   `uid` int unsigned NOT NULL,
   `langcode` varchar(12) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
@@ -1471,7 +1388,6 @@ CREATE TABLE IF NOT EXISTS `users_field_data` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.user__roles
-DROP TABLE IF EXISTS `user__roles`;
 CREATE TABLE IF NOT EXISTS `user__roles` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1489,7 +1405,6 @@ CREATE TABLE IF NOT EXISTS `user__roles` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.user__user_picture
-DROP TABLE IF EXISTS `user__user_picture`;
 CREATE TABLE IF NOT EXISTS `user__user_picture` (
   `bundle` varchar(128) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '' COMMENT 'The field instance bundle to which this row belongs, used when deleting a field instance',
   `deleted` tinyint NOT NULL DEFAULT '0' COMMENT 'A boolean indicating whether this data item has been deleted',
@@ -1511,7 +1426,6 @@ CREATE TABLE IF NOT EXISTS `user__user_picture` (
 -- Data exporting was unselected.
 
 -- Dumping structure for table my_city.watchdog
-DROP TABLE IF EXISTS `watchdog`;
 CREATE TABLE IF NOT EXISTS `watchdog` (
   `wid` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key: Unique watchdog event ID.',
   `uid` int unsigned NOT NULL DEFAULT '0' COMMENT 'The "users".uid of the user who triggered the event.',
@@ -1528,7 +1442,7 @@ CREATE TABLE IF NOT EXISTS `watchdog` (
   KEY `type` (`type`),
   KEY `uid` (`uid`),
   KEY `severity` (`severity`)
-) ENGINE=InnoDB AUTO_INCREMENT=2336 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table that contains logs of all system events.';
+) ENGINE=InnoDB AUTO_INCREMENT=2338 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table that contains logs of all system events.';
 
 -- Data exporting was unselected.
 
